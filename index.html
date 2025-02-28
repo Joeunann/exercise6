@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-ca">
+<head>
+  <meta charset="utf-8">
+  <title>Yoko's Kitchen</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet"
+  >
+  <!-- End of Google Fonts embed -->
+  <style>
+    /* Let’s declare block-level elements */
+    #header,
+    .courses,
+    #footer,
+    #sidebar,
+    #nav,
+    .article,
+    figure,
+    figcaption {
+      display: block;
+    }
+
+    /* Body styling */
+    body {
+      color: #666666;
+      background-color: #f9f8f6;
+      /* Woodgrain background */
+      background-image: url("https://i.imgur.com/px0ic4P.jpg");
+      background-position: center;
+      font-family: "Roboto", Times, serif;
+      line-height: 1.4em;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Centered wrapper with white background */
+    .wrapper {
+      width: 940px;
+      margin: 20px auto; /* top/bottom 20px, auto left/right */
+      /* Removed the thick black border to match the softer look */
+      /* border: 2px solid #000000; */
+      background-color: #ffffff;
+    }
+
+    /* Header area with background image */
+    #header {
+      height: 150px;
+      background-image: url("https://i.imgur.com/4rcWA3C.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* H1 text is visually hidden; the background image has the text */
+    h1 {
+      text-indent: -9999px;
+      width: 940px;
+      height: 130px;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navigation bar below the header */
+    .navbar {
+      width: 940px;         /* Match the .wrapper width */
+      background-color: #848884;
+      /* Removed position: fixed; so it sits naturally below the header */
+      overflow: auto;       /* Contain floated items (links) */
+    }
+
+    .navbar a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .navbar a:hover {
+      background: #ddd;
+      color: #000;
+    }
+
+    /* Main content columns */
+    .courses {
+      float: left;
+      width: 65%;
+      border-right: 1px solid #eeeeee;
+      padding-bottom: 20px; /* extra space at bottom */
+    }
+
+    #sidebar {
+      float: right;
+      width: 30%;
+      padding: 0 20px;
+    }
+
+    /* Articles */
+    .article {
+      clear: both;
+      overflow: auto;
+      width: 100%;
+    }
+
+    .hgroup {
+      margin-top: 40px;
+    }
+
+    figure {
+      float: left;
+      width: 290px;
+      height: 215px;
+      padding: 5px;
+      margin: 20px;
+      border: 1px solid #eeeeee;
+    }
+
+    figcaption {
+      font-size: 90%;
+      text-align: left;
+      font-weight: 300;
+      font-style: normal;
+    }
+
+    /* Headings */
+    h2 {
+      margin: 10px 0 5px 0;
+      padding: 0;
+      font-weight: 700;
+      font-style: normal;
+      color: #000; /* Darker heading color for readability */
+    }
+
+    h3 {
+      margin: 0 0 10px 0;
+      color: #de6581;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    #sidebar h2 {
+      padding: 30px 0 10px 0;
+    }
+
+    /* Footer at the bottom */
+    #footer {
+      clear: both;
+      color: #ffffff;
+      background-color: #aeaca8;
+      height: 30px;
+      font-size: 80%;
+      padding: 7px 0 0 20px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- Header with background image -->
+    <div id="header">
+      <h1>Yoko's Kitchen</h1>
+      <!-- #nav placeholder (not used in this example) -->
+      <div id="nav"></div>
+    </div>
+
+    <!-- Navbar under the header -->
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Classes</a>
+      <a href="#">Catering</a>
+      <a href="#">About</a>
+    </div>
+
+    <!-- Main Content (courses + sidebar) -->
+    <div class="courses">
+      <div class="article">
+        <figure>
+          <img src="https://i.imgur.com/GaC5TSH.jpg" alt="Bok Choi">
+          <figcaption>Bok Choi</figcaption>
+        </figure>
+        <div class="hgroup">
+          <h2>Japanese Vegetarian</h2>
+          <h3>Five week course in London</h3>
+        </div>
+        <p>
+          A five week introduction to<br>
+          traditional Japanese vegetarian<br>
+          meals, teaching you a selection of<br>
+          rice and noodle dishes.
+        </p>
+      </div>
+      <div class="article">
+        <figure>
+          <img src="https://i.imgur.com/dd27k4P.jpg" alt="Teriyaki Sauce">
+          <figcaption>Teriyaki Sauce</figcaption>
+        </figure>
+        <div class="hgroup">
+          <h2>Sauces Masterclass</h2>
+          <h3>One day workshop</h3>
+        </div>
+        <p>
+          An intensive one-day course<br>
+          looking at how to create the most<br>
+          delicious sauces for use in a range<br>
+          of Japanese cookery.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="popular-recipes">
+        <h2>Popular Recipes</h2>
+        <p>
+          Yakitori (grilled chicken)<br>
+          Tsukune (minced chicken patties)<br>
+          Okonomiyaki (savory pancakes)<br>
+          Mizutaki (chicken stew)
+        </p>
+      </div>
+      <div class="contact-details">
+        <h2>Contact</h2>
+        <p>
+          Yoko's Kitchen<br>
+          27 Redchurch Street<br>
+          Shoreditch<br>
+          London E2 7DP
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+      &copy; 2024 Yoko's Kitchen
+    </div>
+  </div>
+</body>
+</html>
